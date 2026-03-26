@@ -1,7 +1,11 @@
 import { ArrowRight, ChevronRight, DraftingCompass, Pencil, Wrench, FileCode2, Paperclip, Lightbulb } from "lucide-react";
-import notebookImg from "figma:asset/dfd2d67f9b06a19b8b8cb545916954b7e4f6d5dd.png";
-import lightGearImg from "figma:asset/e5fe909cafee1d94a6fc1855f3c8369e29398259.png";
+//import notebookImg from "figma:asset/dfd2d67f9b06a19b8b8cb545916954b7e4f6d5dd.png";
+//import lightGearImg from "figma:asset/e5fe909cafee1d94a6fc1855f3c8369e29398259.png";
 import { projectsData } from "../data/projects";
+
+const notebookImg = "https://placehold.co/600x400/1a232e/7dd3fc?text=Vol+VII+Archive";
+const lightGearImg = "https://placehold.co/600x400/1a232e/d9a7b0?text=Gear+Schematic";
+const darkEngineImg = "https://placehold.co/600x400/1a232e/e2e8f0?text=Engine+Draft";
 
 export function Projects() {
   // Only display the ones that actually have detailed sketches/content for the journal

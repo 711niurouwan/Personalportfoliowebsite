@@ -1,6 +1,11 @@
-import notebookImg from "figma:asset/dfd2d67f9b06a19b8b8cb545916954b7e4f6d5dd.png";
-import lightGearImg from "figma:asset/e5fe909cafee1d94a6fc1855f3c8369e29398259.png";
-import darkEngineImg from "figma:asset/c10c1305ec14be439739c57944a5b504620521b4.png";
+//import notebookImg from "figma:asset/dfd2d67f9b06a19b8b8cb545916954b7e4f6d5dd.png";
+//import lightGearImg from "figma:asset/e5fe909cafee1d94a6fc1855f3c8369e29398259.png";
+//import darkEngineImg from "figma:asset/c10c1305ec14be439739c57944a5b504620521b4.png";
+
+// Placeholder images to bypass Figma errors
+const notebookImg = "https://placehold.co/600x400/1a232e/7dd3fc?text=Notebook+Archive";
+const lightGearImg = "https://placehold.co/600x400/1a232e/d9a7b0?text=Gears+Schematic";
+const darkEngineImg = "https://placehold.co/600x400/1a232e/e2e8f0?text=Engine+Draft";
 
 export const projectsData = [
   {
