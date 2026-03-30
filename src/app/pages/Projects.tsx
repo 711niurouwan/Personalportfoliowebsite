@@ -22,15 +22,14 @@ export function Projects() {
 
         <div className="lg:col-span-7 space-y-8 relative">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-yellow-200/50 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-200 rounded-md font-note text-xl mb-6 shadow-sm border border-yellow-300/50 -rotate-1">
-              <Pencil size={18} /> Jotting down ideas...
-            </div>
-            <h1 className="font-hand text-5xl md:text-7xl font-bold tracking-tight text-slate-800 dark:text-slate-100 mb-6 leading-tight">
-              My Engineering <br/>
-              <span className="text-blue-600 dark:text-blue-400 border-b-4 border-blue-600/30 pb-2">Sketchbook.</span>
+            <h1
+            className="text-5xl md:text-7xl font-bold tracking-tight text-slate-800 dark:text-slate-100 mb-6 leading-tight"
+            style={{ fontFamily: 'Roboto Condensed, sans-serif' }}
+          >
+              <span className="text-black-600 dark:text-black-400 border-b-4 border-black-600/30 pb-2">Cindy Zhou</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-2xl font-body leading-relaxed">
-              Documenting the architecture, the bugs, and the breakthroughs. I build scalable web systems and dive deep into technical problem-solving. Less screen, more paper.
+              Documenting my builds and projects. Robotics, smart home systems, and mechanical designs - all the gears and wires that power my world.
             </p>
           </div>
 
@@ -45,12 +44,12 @@ export function Projects() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 mt-4 border-t border-slate-300 dark:border-slate-700/50">
             <div className="flex flex-col gap-2">
-              <span className="font-hand font-bold text-slate-500">Frontend</span>
-              <span className="flex items-center gap-2 font-body text-sm text-slate-700 dark:text-slate-300"><FileCode2 size={16} className="text-blue-500"/> React/TS</span>
+              <span className="font-hand font-bold text-slate-500">Major</span>
+              <span className="flex items-center gap-2 font-body text-sm text-slate-700 dark:text-slate-300"><FileCode2 size={16} className="text-blue-500"/> Mechanical Engineering</span>
             </div>
             <div className="flex flex-col gap-2">
-              <span className="font-hand font-bold text-slate-500">Backend</span>
-              <span className="flex items-center gap-2 font-body text-sm text-slate-700 dark:text-slate-300"><Wrench size={16} className="text-blue-500"/> Go/Node</span>
+              <span className="font-hand font-bold text-slate-500">Minor</span>
+              <span className="flex items-center gap-2 font-body text-sm text-slate-700 dark:text-slate-300"><Wrench size={16} className="text-blue-500"/> Electrical Engineering</span>
             </div>
           </div>
         </div>
@@ -187,7 +186,7 @@ export function Projects() {
               Always looking for complex systems to architect and build. Drop a line if you need engineering horsepower.
             </p>
           </div>
-          <a href="mailto:hello@example.com" className="bg-white text-blue-600 px-8 py-4 rounded-xl font-hand text-2xl font-bold hover:bg-yellow-100 hover:text-blue-800 transition-colors shadow-md hover:-translate-y-1 hover:shadow-xl flex items-center gap-3">
+          <a href="mailto:xinyizhou.eng@gmail.com" className="bg-white text-blue-600 px-8 py-4 rounded-xl font-hand text-2xl font-bold hover:bg-yellow-100 hover:text-blue-800 transition-colors shadow-md hover:-translate-y-1 hover:shadow-xl flex items-center gap-3">
             Say Hello <Pencil size={24} />
           </a>
         </div>

@@ -1,4 +1,4 @@
-import { Outlet, Link } from "react-router";
+import { Outlet, Link } from "react-router-dom";
 import { PenTool, Github, Linkedin, Mail, Sparkles } from "lucide-react";
 
 export function SketchbookLayout() {
@@ -17,7 +17,7 @@ export function SketchbookLayout() {
 
           <div className="absolute left-1/2 -translate-x-1/2 flex items-center gap-2">
             <PenTool size={20} strokeWidth={2.5} className="text-blue-600 dark:text-blue-400" />
-            <span className="font-hand font-bold text-2xl tracking-wide block leading-tight text-slate-800 dark:text-slate-200">My Sketchbook</span>
+            <span className="font-hand font-bold text-2xl tracking-wide block leading-tight text-slate-800 dark:text-slate-200">Cindy's Sketchbook</span>
           </div>
 
           <nav className="hidden sm:flex items-center gap-8 text-xl font-hand text-slate-600 dark:text-slate-400">
