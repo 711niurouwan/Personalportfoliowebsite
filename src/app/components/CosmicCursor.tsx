@@ -13,7 +13,7 @@ export function CosmicCursor({ active }: { active: boolean }) {
       }
 
       // Spawn "Dust" particles (Abstract circles instead of emojis)
-      if (Math.random() > 0.4) {
+      if (Math.random() > 0.8) {
         const particle = document.createElement("div");
         
         // Randomly pick a color from your cosmic theme
