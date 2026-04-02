@@ -1,15 +1,16 @@
 import { ArrowRight, ChevronRight, DraftingCompass, Pencil, Wrench, FileCode2, Paperclip, Lightbulb } from "lucide-react";
-//import notebookImg from "figma:asset/dfd2d67f9b06a19b8b8cb545916954b7e4f6d5dd.png";
+import { Link } from "react-router-dom";
+//import notebookImg from "figma:asset/dfd2d67f9b06a19b8b8cb545916954b7e4d7e4f6d5dd.png";
 //import lightGearImg from "figma:asset/e5fe909cafee1d94a6fc1855f3c8369e29398259.png";
-import { projectsData } from "../data/projects";
+import { getPublishedLogs } from "../../content/logs/logs";
 
 const notebookImg = "https://placehold.co/600x400/1a232e/7dd3fc?text=Vol+VII+Archive";
 const lightGearImg = "https://placehold.co/600x400/1a232e/d9a7b0?text=Gear+Schematic";
 const darkEngineImg = "https://placehold.co/600x400/1a232e/e2e8f0?text=Engine+Draft";
 
 export function Projects() {
-  // Only display the ones that actually have detailed sketches/content for the journal
-  const displayedProjects = projectsData.filter(p => p.status !== "Idea" && p.status !== "Planning");
+  // Automatically generate cards from Markdown log files.
+  const displayedProjects = getPublishedLogs();
 
   return (
     <div className="space-y-32 pb-12">
@@ -38,7 +39,7 @@ export function Projects() {
               Flip Pages <ArrowRight size={20} />
             </a>
             <a href="#contact" className="bg-white dark:bg-[#1e1e1e] border-2 border-slate-300 dark:border-slate-700 px-6 py-3 rounded-md flex items-center gap-2 hover:border-slate-400 transition-all shadow-sm hover:-translate-y-1">
-              Say Hello <DraftingCompass size={20} />
+              Email Me <DraftingCompass size={20} />
             </a>
           </div>
 
@@ -82,7 +83,7 @@ export function Projects() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b-2 border-slate-300 dark:border-slate-700/50 pb-6">
           <div>
             <h2 className="font-hand text-4xl font-bold flex items-center gap-3 text-slate-800 dark:text-slate-100">
-              <Lightbulb size={32} className="text-yellow-500" /> Recent Sketches & Projects
+              <Lightbulb size={32} className="text-yellow-500" /> Recent Projects & Logs
             </h2>
             <p className="text-slate-600 dark:text-slate-400 mt-2 font-body max-w-xl text-lg">
               Chronological documentation of active builds, research notes, and architectural decisions.
@@ -94,8 +95,8 @@ export function Projects() {
         </div>
 
         <div className="grid grid-cols-1 gap-16">
-          {displayedProjects.map((project, idx) => (
-            <article id={project.id.toLowerCase().replace(/[^a-z0-9]+/g, '-')} key={project.id} className="relative group grid grid-cols-1 md:grid-cols-12 gap-8 bg-white dark:bg-[#1e1e1e] border border-slate-200 dark:border-slate-800 rounded-xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 scroll-mt-24">
+          {displayedProjects.map((project) => (
+            <article id={project.slug} key={project.slug} className="relative group grid grid-cols-1 md:grid-cols-12 gap-8 bg-white dark:bg-[#1e1e1e] border border-slate-200 dark:border-slate-800 rounded-xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 scroll-mt-24">
               
               {/* Handwritten Note decoration */}
               {project.note && (
@@ -143,9 +144,9 @@ export function Projects() {
                     </div>
                   </div>
 
-                  <a href="#" className="inline-flex items-center gap-2 font-hand text-xl text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 mt-4 group/link transition-colors">
-                    View Complete Log <ChevronRight size={20} className="group-hover/link:translate-x-1 transition-transform" />
-                  </a>
+                  <Link to={project.link} className="inline-flex items-center gap-2 font-hand text-xl text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 mt-4 group/link transition-colors">
+                    <ChevronRight size={20} className="group-hover/link:translate-x-1 transition-transform" />Read More...
+                  </Link>
                 </div>
 
                 {/* Project Image/Visualizer */}
@@ -183,7 +184,7 @@ export function Projects() {
           <div className="space-y-4">
             <h2 className="font-hand text-4xl font-bold">Let's build together.</h2>
             <p className="max-w-md text-blue-100 font-body text-lg">
-              Always looking for complex systems to architect and build. Drop a line if you need engineering horsepower.
+              Always looking forward to new projects!
             </p>
           </div>
           <a href="mailto:xinyizhou.eng@gmail.com" className="bg-white text-blue-600 px-8 py-4 rounded-xl font-hand text-2xl font-bold hover:bg-yellow-100 hover:text-blue-800 transition-colors shadow-md hover:-translate-y-1 hover:shadow-xl flex items-center gap-3">
@@ -191,10 +192,6 @@ export function Projects() {
           </a>
         </div>
         
-        {/* Hand drawn arrow pointing to button */}
-        <div className="absolute bottom-4 right-[15%] font-note text-3xl text-yellow-300 -rotate-12 hidden lg:block">
-           Reach out!
-        </div>
       </section>
 
     </div>

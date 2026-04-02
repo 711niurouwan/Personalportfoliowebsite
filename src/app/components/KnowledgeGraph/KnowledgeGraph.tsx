@@ -1,5 +1,6 @@
 import ForceGraph2D from 'react-force-graph-2d';
 import { cosmicGraphData } from '../../data/graphData';
+import { projectsData } from '../../data/projects';
 import { useGlobalState } from '../../../context/GlobalState';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
@@ -15,17 +16,29 @@ export const KnowledgeGraph = () => {
         graphData={cosmicGraphData}
         nodeLabel={(node) => (node as any).name || (node.id as string)}
         onNodeHover={(node) => setHoverNode(node)}
-        onNodeClick={(node) => {
-          const id = node.id as string;
-          setActiveStarId(id);
-          navigate(`/journal#${id.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`);
-        }}
+        onNodeClick={(node: any) => {
+  const id = node.id as string; // This is "Sketch #01"
+  
+  // 1. Still update the Intercom so the bottom badge shows the name
+  setActiveStarId(id);
+
+  // 2. Find the project object that matches this ID
+  const project = projectsData.find((p) => p.id === id);
+
+  // 3. Use the SLUG for the elevator (the URL)
+  if (project) {
+    navigate(`/journal/${project.slug}`); 
+  } else {
+    // Fallback if no project matches
+    navigate('/journal');
+  }
+}}
         backgroundColor="#000000"
         linkColor={() => '#333333'}
-        nodePointerAreaPaint={(node, color, ctx) => {
+        nodePointerAreaPaint={(node, color, ctx, globalScale) => {
           ctx.fillStyle = color;
           ctx.beginPath();
-          ctx.arc(node.x!, node.y!, 12, 0, 2 * Math.PI, false);
+          ctx.arc(node.x!, node.y!, 12 / globalScale, 0, 2 * Math.PI, false);
           ctx.fill();
         }}
         nodeCanvasObject={(node, ctx, globalScale) => {
