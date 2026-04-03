@@ -3,8 +3,9 @@ import { GalaxyHome } from "./pages/GalaxyHome";
 import { SketchbookLayout } from "./components/SketchbookLayout";
 import { Projects } from "./pages/Projects";
 import { ProjectDetail } from "./pages/ProjectDetail";
-import { KnowledgeGraph } from "./components/KnowledgeGraph/KnowledgeGraph";
-// Ensure Journal is imported if you're using it, or just use Projects/SketchbookLayout
+import { lazy, Suspense } from 'react';
+
+const KnowledgeGraph = lazy(() => import('./components/KnowledgeGraph/KnowledgeGraph'));// Ensure Journal is imported if you're using it, or just use Projects/SketchbookLayout
 // import { Journal } from "./pages/Journal"; 
 
 function RootLayout() {
@@ -12,7 +13,9 @@ function RootLayout() {
     <>
       {/* Background Layer stays consistent across all pages */}
       <div style={{ position: "fixed", inset: 0, zIndex: 0 }}>
-        <KnowledgeGraph />
+        <Suspense fallback={null}>
+          <KnowledgeGraph />
+        </Suspense>
       </div>
       {/* This is where GalaxyHome or Journal/Projects will render */}
       <Outlet />

@@ -72,3 +72,4 @@ export const KnowledgeGraph = () => {
     </div>
   );
 };
+export default KnowledgeGraph;
