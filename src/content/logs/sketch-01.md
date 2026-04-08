@@ -6,7 +6,7 @@ status: "Published"
 role: "Lead Mechanical Engineer"
 tech: ["SolidWorks", "3D Printing","Sheet Metal Fabrication", "Tank Tread Design"]
 description: "Designing a autonomous delivery robot for rough terrain. "
-image: "https://placehold.co/600x400"
+image: "/src/assets/setdeliveryrobobeforeshowcase.jpg"
 slug: "sketch-01"
 ---
 

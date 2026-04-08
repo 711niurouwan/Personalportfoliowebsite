@@ -10,9 +10,9 @@ export function SketchbookLayout() {
       {/* Top Bar - Header */}
       <header className="sticky top-0 z-50 bg-[#FDFBF7]/90 dark:bg-[#121212]/90 backdrop-blur-md border-b border-slate-200/50 dark:border-slate-800">
         <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between relative">
-          <Link to="/" className="flex items-center gap-3 group text-pink-500 hover:text-pink-600 transition-colors">
+          <Link to="/" className="flex items-center gap-3 group text-slate-800 hover:text-blue-600 hover:-translate-y-0.5 transition-transform">
             <Sparkles size={24} />
-            <span className="font-hand font-bold text-xl hidden sm:block">Back to Galaxy</span>
+            <span className="font-hand font-bold text-xl hidden sm:block ">Back to Galaxy View</span>
           </Link>
 
           <div className="absolute left-1/2 -translate-x-1/2 flex items-center gap-2">
@@ -40,15 +40,15 @@ export function SketchbookLayout() {
               Thanks for stopping by!
             </h3>
             <p className="font-note text-2xl text-slate-500 dark:text-slate-400">
-              Drawn with React & Tailwind.
+              Connect with me. 
             </p>
           </div>
           <div className="flex flex-col items-center md:items-end gap-4">
             <div className="flex items-center gap-4">
-              <a href="#" className="p-2 text-slate-500 hover:text-blue-600 hover:-translate-y-1 transition-all">
+              <a href="https://github.com/711niurouwan" target="_blank" rel="noopener noreferrer" className="p-2 text-slate-500 hover:text-blue-600 hover:-translate-y-1 transition-all">
                 <Github size={24} />
               </a>
-              <a href="#" className="p-2 text-slate-500 hover:text-blue-600 hover:-translate-y-1 transition-all">
+              <a href="https://www.linkedin.com/in/xinyi-zhouu" target="_blank" rel="noopener noreferrer" className="p-2 text-slate-500 hover:text-blue-600 hover:-translate-y-1 transition-all">
                 <Linkedin size={24} />
               </a>
               <a href="#" className="p-2 text-slate-500 hover:text-blue-600 hover:-translate-y-1 transition-all">

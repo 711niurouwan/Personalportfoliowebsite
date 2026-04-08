@@ -1,5 +1,4 @@
 // Add this at the top of logs.ts
-import { projectsData } from "../../app/data/projects";// (Check your folder path! You might need more or fewer "../")
 import matter from "gray-matter";
 
 export interface ProjectLog {
@@ -70,5 +69,5 @@ export function getPublishedLogs() {
 }
 
 export const getLogBySlug = (slug: string) => { // Add ": string" here
-  return projectsData.find((p: any) => p.slug === slug); // Add ": any" here
+  return logs.find((p) => p.slug === slug); // Add ": any" here
 };

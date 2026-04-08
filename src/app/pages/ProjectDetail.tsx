@@ -84,15 +84,15 @@ export function ProjectDetail() {
           <div className="grid gap-6 md:grid-cols-3">
             <div className="rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#141414] p-6 shadow-sm">
               <p className="text-sm uppercase tracking-[0.25em] text-slate-500 dark:text-slate-400">Status</p>
-              <p className="mt-4 text-2xl font-bold text-slate-900 dark:text-slate-100">{project.status}</p>
+              <p className="mt-4 text-lg font-bold text-slate-900 dark:text-slate-100">{project.status}</p>
             </div>
             <div className="rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#141414] p-6 shadow-sm">
               <p className="text-sm uppercase tracking-[0.25em] text-slate-500 dark:text-slate-400">Role</p>
-              <p className="mt-4 text-2xl font-bold text-slate-900 dark:text-slate-100">{project.role}</p>
+              <p className="mt-4 text-lg font-bold text-slate-900 dark:text-slate-100">{project.role}</p>
             </div>
             <div className="rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#141414] p-6 shadow-sm">
-              <p className="text-sm uppercase tracking-[0.25em] text-slate-500 dark:text-slate-400">Date</p>
-              <p className="mt-4 text-2xl font-bold text-slate-900 dark:text-slate-100">{project.date}</p>
+              <p className="text-sm uppercase tracking-[0.25em] text-slate-500 dark:text-slate-400">Last Edited</p>
+              <p className="mt-4 text-lg font-bold text-slate-900 dark:text-slate-100">{project.date}</p>
             </div>
           </div>
 

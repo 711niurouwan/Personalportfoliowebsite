@@ -1,7 +1,7 @@
 ---
 title: "Plant Watering System"
 date: "Winter 2025"
-status: "Published"
+status: "Planning"
 role: "Full-Stack Dev"
 type: "Prototype"
 tech:

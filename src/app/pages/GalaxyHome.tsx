@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { CosmicCursor } from "../components/CosmicCursor";
-import { projectsData } from "../data/projects";
+import { logs } from "../../content/logs/logs";
 import { useGlobalState } from "../../context/GlobalState";
 import { Rocket, Star } from "lucide-react";
 import { useState } from "react";
@@ -8,8 +8,8 @@ import { useState } from "react";
 export function GalaxyHome() {
   const { activeStarId, setActiveStarId } = useGlobalState();
   const [butterflyActive] = useState(true);
-  const activeStar = projectsData.find((p) => p.id === activeStarId);
-
+  const activeStar = logs.find((p) => p.slug === activeStarId);
+  
   return (
     <div className="relative w-screen h-screen bg-transparent overflow-hidden font-body text-white selection:bg-purple-900/50 pointer-events-none">
       {/* Cosmic Cursor */}

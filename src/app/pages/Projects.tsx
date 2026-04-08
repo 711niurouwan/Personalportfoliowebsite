@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 //import lightGearImg from "figma:asset/e5fe909cafee1d94a6fc1855f3c8369e29398259.png";
 import { getPublishedLogs } from "../../content/logs/logs";
 
-const notebookImg = "https://placehold.co/600x400/1a232e/7dd3fc?text=Vol+VII+Archive";
+const notebookImg = "src/assets/cindyatufsasegbm.jpg";
 const lightGearImg = "https://placehold.co/600x400/1a232e/d9a7b0?text=Gear+Schematic";
 const darkEngineImg = "https://placehold.co/600x400/1a232e/e2e8f0?text=Engine+Draft";
 
@@ -17,9 +17,6 @@ export function Projects() {
       {/* HERO SECTION */}
       <section id="about" className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center min-h-[60vh] py-12 relative">
         {/* Decorative handwritten note */}
-        <div className="absolute top-0 right-12 font-note text-3xl text-blue-600 rotate-6 hidden lg:block opacity-80">
-          Draft #1
-        </div>
 
         <div className="lg:col-span-7 space-y-8 relative">
           <div>
@@ -30,16 +27,16 @@ export function Projects() {
               <span className="text-black-600 dark:text-black-400 border-b-4 border-black-600/30 pb-2">Cindy Zhou</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-2xl font-body leading-relaxed">
-              Documenting my builds and projects. Robotics, smart home systems, and mechanical designs - all the gears and wires that power my world.
+              Hihi, my name is Cindy. I am a second year MechE major with an EE minor at the University of Florida.
             </p>
           </div>
 
           <div className="flex flex-wrap gap-4 font-hand text-xl">
             <a href="#projects" className="bg-slate-800 text-white dark:bg-slate-200 dark:text-slate-900 px-6 py-3 rounded-md flex items-center gap-2 hover:bg-blue-600 dark:hover:bg-blue-500 hover:text-white transition-all shadow-md hover:-translate-y-1 hover:shadow-lg">
-              Flip Pages <ArrowRight size={20} />
+              Projects <ArrowRight size={20} />
             </a>
             <a href="#contact" className="bg-white dark:bg-[#1e1e1e] border-2 border-slate-300 dark:border-slate-700 px-6 py-3 rounded-md flex items-center gap-2 hover:border-slate-400 transition-all shadow-sm hover:-translate-y-1">
-              Email Me <DraftingCompass size={20} />
+              Contact Me <DraftingCompass size={20} />
             </a>
           </div>
 
@@ -86,7 +83,7 @@ export function Projects() {
               <Lightbulb size={32} className="text-yellow-500" /> Recent Projects & Logs
             </h2>
             <p className="text-slate-600 dark:text-slate-400 mt-2 font-body max-w-xl text-lg">
-              Chronological documentation of active builds, research notes, and architectural decisions.
+              Documentation of cool things I've done. 
             </p>
           </div>
           <div className="font-note text-2xl text-slate-500 flex items-center gap-2">

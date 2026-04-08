@@ -1,3 +1,4 @@
+//routes.tsx
 import { createBrowserRouter, Outlet } from "react-router-dom";
 import { GalaxyHome } from "./pages/GalaxyHome";
 import { SketchbookLayout } from "./components/SketchbookLayout";

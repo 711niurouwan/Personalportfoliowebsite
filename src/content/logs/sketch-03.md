@@ -1,7 +1,7 @@
 ---
-title: "Automatic Plant Farmer"
+title: "Automatic 3D-Print Farm"
 date: "Fall 2025"
-status: "Ongoing"
+status: "Planning"
 role: "Backend Architect"
 type: "Research"
 tech:
