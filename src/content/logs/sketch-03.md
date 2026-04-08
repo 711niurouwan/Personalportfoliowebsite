@@ -1,26 +1,21 @@
 ---
 title: "Automatic 3D-Print Farm"
 date: "Fall 2025"
-status: "Planning"
-role: "Backend Architect"
-type: "Research"
+status: "Published"
+role: "..."
+type: "Prototype"
 tech:
-  - Node.js
-  - Redis
-  - CRDTs
-  - WebRTC
-excerpt: "Designing a conflict-free replicated data type system for offline-first synchronization across edge devices."
+  - ...
+excerpt: "..."
 ---
 
 # Distributed State Sync
 
-This log captures the research into building robust offline-first sync for distributed edge devices. The goal is to ensure state converges correctly even when connections are intermittent.
+...
 
 ## Design Notes
 
-- Evaluating CRDT types for document state and command logs.
-- Using WebRTC for peer-to-peer device discovery.
-- Leveraging Redis for local checkpointing and reconciliation.
+- ...
 
 ```js
 function mergeState(local, remote) {
@@ -30,4 +25,4 @@ function mergeState(local, remote) {
 
 ## Next Steps
 
-Integrate the CRDT model into the existing sync layer and write a fallback path for partial updates.
+...

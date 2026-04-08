@@ -8,7 +8,7 @@ const groupMap: Record<string, number> = {
 };
 
 export const cosmicGraphData = {
-  nodes: logs.map((log) => ({
+  nodes: logs.filter((log) => log.status === "Published").map((log) => ({
     id: log.slug,
     name: log.title,
     group: groupMap[log.type] ?? 1,
