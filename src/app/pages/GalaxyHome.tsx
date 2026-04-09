@@ -22,9 +22,9 @@ export function GalaxyHome() {
       <header className="absolute top-0 left-0 w-full p-6 z-20 flex flex-col gap-4 md:flex-row md:items-center md:justify-between pointer-events-auto">
         <div>
           <h1 className="font-hand text-2xl md:text-3xl font-bold tracking-widest text-transparent bg-clip-text bg-white">
-            Cindy's World
+            Cindy Zhou
           </h1>
-          <p className="font-note text-slate-400 text-lg md:text-xl">Explore Cindy's Documentation</p>
+          <p className="font-note text-slate-400 text-lg md:text-xl">Welcome to My Personal Website</p>
         </div>
 
         <div className="flex flex-wrap items-center gap-4">
