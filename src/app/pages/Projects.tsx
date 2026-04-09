@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 //import lightGearImg from "figma:asset/e5fe909cafee1d94a6fc1855f3c8369e29398259.png";
 import { getPublishedLogs } from "../../content/logs/logs";
 
-const notebookImg = "src/assets/cindyatufsasegbm.jpg";
+const notebookImg = `${import.meta.env.BASE_URL}assets/cindyatufsasegbm.jpg`;
 const lightGearImg = "https://placehold.co/600x400/1a232e/d9a7b0?text=Gear+Schematic";
 const darkEngineImg = "https://placehold.co/600x400/1a232e/e2e8f0?text=Engine+Draft";
 
