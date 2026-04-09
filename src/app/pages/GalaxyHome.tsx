@@ -1,33 +1,43 @@
 import { Link } from "react-router-dom";
+import { Rocket } from "lucide-react";
+import { useState, useEffect } from "react";
 import { CosmicCursor } from "../components/CosmicCursor";
-import { logs } from "../../content/logs/logs";
-import { useGlobalState } from "../../context/GlobalState";
-import { Rocket, Star } from "lucide-react";
-import { useState } from "react";
+// @ts-ignore
+import FuzzyText from '@/components/FuzzyText';
 
+// Component ported and enhanced from https://codepen.io/JuanFuentes/pen/eYEeoyE
 export function GalaxyHome() {
-  const { activeStarId, setActiveStarId } = useGlobalState();
   const [butterflyActive] = useState(true);
-  const activeStar = logs.find((p) => p.slug === activeStarId);
-  
+  const [fontSize, setFontSize] = useState(22);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setFontSize(window.innerWidth < 640 ? 14 : 22);
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <div className="relative w-screen h-screen bg-transparent overflow-hidden font-body text-white selection:bg-purple-900/50 pointer-events-none">
+      
       {/* Cosmic Cursor */}
       <CosmicCursor active={butterflyActive} />
 
-      {/* Subtle vignette */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_rgba(0,0,0,0.4)_100%)] z-0 pointer-events-none" />
+      {/* Left: Fuzzy Text */}
+<div className="absolute top-6 left-6 w-[90vw] max-w-[400px] h-auto z-[30] pointer-events-auto">
+  <div className="relative w-full h-[60px]">
+    <FuzzyText fontSize={fontSize} baseIntensity={0.01} hoverIntensity={0.39} enableHover>Hi! My name is Cindy.</FuzzyText>
+  </div>
+  <div className="relative w-full h-[60px]">
+    <FuzzyText fontSize={fontSize} baseIntensity={0.01} hoverIntensity={0.39} enableHover>Welcome to my website!</FuzzyText>
+  </div>
+</div>
 
       {/* Header/Nav overlay */}
-      <header className="absolute top-0 left-0 w-full p-6 z-20 flex flex-col gap-4 md:flex-row md:items-center md:justify-between pointer-events-auto">
-        <div>
-          <h1 className="font-hand text-2xl md:text-3xl font-bold tracking-widest text-transparent bg-clip-text bg-white">
-            Cindy Zhou
-          </h1>
-          <p className="font-note text-slate-400 text-lg md:text-xl">Welcome to My Personal Website</p>
-        </div>
-
-        <div className="flex flex-wrap items-center gap-4">
+      <header className="absolute top-0 left-0 w-full p-6 z-20 flex flex-row items-center pointer-events-auto">
+        <div className="flex-1 flex justify-end">
           <Link
             to="/journal"
             className="flex items-center gap-2 px-4 py-2 bg-white/10 border border-white/10 rounded-full hover:bg-white/20 transition-colors text-sm text-slate-300"
