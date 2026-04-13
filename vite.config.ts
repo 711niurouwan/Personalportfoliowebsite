@@ -5,14 +5,12 @@ import react from '@vitejs/plugin-react'
 import { visualizer } from 'rollup-plugin-visualizer';
 
 export default defineConfig(({ command }) => {
-  const base = command === 'build' ? '/Personalportfoliowebsite/' : '/'
-
+  const base = process.env.VERCEL ? '/' : '/Personalportfoliowebsite/'
   return {
-    base,
     plugins: [
       react(),
       tailwindcss(),
-      visualizer({ open: true }) // opens a report in your browser after build
+      visualizer({ open: true })
     ],
     resolve: {
       alias: {
@@ -26,7 +24,6 @@ export default defineConfig(({ command }) => {
     optimizeDeps: {
       include: ['buffer'],
     },
-    // ADD '**/*.md' HERE:
     assetsInclude: ['**/*.svg', '**/*.csv', '**/*.md'],
     build: {
       rollupOptions: {
