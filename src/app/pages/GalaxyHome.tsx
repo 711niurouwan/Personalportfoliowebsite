@@ -34,7 +34,7 @@ useEffect(() => {
       <CosmicCursor active={butterflyActive} />
 
       {/* Left: Fuzzy Text */}
-<div className="absolute top-6 left-6 w-[90vw] max-w-[400px] h-auto z-[30] pointer-events-auto">
+<div className="absolute top-6 left-6 w-[60vw] max-w-[400px] h-auto z-[30] pointer-events-auto">
   <div className="relative w-full h-[60px]">
     <FuzzyText fontSize={fontSize} baseIntensity={0.01} hoverIntensity={0.39} enableHover>Hi! My name is Cindy.</FuzzyText>
   </div>
@@ -44,7 +44,7 @@ useEffect(() => {
 </div>
 
       {/* Header/Nav overlay */}
-      <header className="absolute top-0 left-0 w-full p-6 z-20 flex flex-row items-center pointer-events-auto">
+      <header className="absolute top-0 left-0 w-full p-6 z-40 flex flex-row items-center pointer-events-auto">
         <div className="flex-1 flex justify-end">
           <Link
             to="/journal"
