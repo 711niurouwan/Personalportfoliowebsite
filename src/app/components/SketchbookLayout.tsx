@@ -22,7 +22,7 @@ export function SketchbookLayout() {
 
           <nav className="hidden sm:flex items-center gap-8 text-xl font-hand text-slate-600 dark:text-slate-400">
             <a href="#projects" className="hover:text-blue-600 dark:hover:text-blue-400 hover:-translate-y-0.5 transition-transform">Projects</a>
-            <a href="#contact" className="hover:text-blue-600 dark:hover:text-blue-400 hover:-translate-y-0.5 transition-transform">Contact</a>
+            <a href="https://www.linkedin.com/in/xinyi-zhouu" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 dark:hover:text-blue-400 hover:-translate-y-0.5 transition-transform">Contact</a>
           </nav>
         </div>
       </header>
