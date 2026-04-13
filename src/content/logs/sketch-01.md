@@ -25,9 +25,9 @@ Some of the chordal dimensions from the previous versions are a little questiona
 
 I remade the sprocket based on the matlab script I made which provided me with all the dimensions, and it works perfectly!
 
-![MATLAB Screenshot](/assets/sketch-01/matlab-ss.png)
+![MATLAB Screenshot](/Personalportfoliowebsite/assets/sketch-01/matlab-ss.png)
 
-![Sprocket Sketch](/assets/sketch-01/sprocket_sketch.png)
+![Sprocket Sketch](/Personalportfoliowebsite/assets/sketch-01/sprocket_sketch.png)
 
 ## Dec.21st
 Updated the side bars for the tread link. Originally there are some extra materials on the cylinder that are gonna cause the link not be able to slide smoothly. 
