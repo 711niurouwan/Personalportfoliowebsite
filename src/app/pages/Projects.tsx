@@ -130,7 +130,7 @@ export function Projects() {
                   
                   <div className="space-y-3">
                     <span className="font-hand font-bold text-slate-500 flex items-center gap-2">
-                       <Wrench size={16} /> Tools Used
+                       <Wrench size={16} /> Skills
                     </span>
                     <div className="flex flex-wrap gap-2">
                       {project.tech.map(tech => (
