@@ -1,11 +1,21 @@
+# Cindy's Personal Portfolio Website
 
-  # Personal Portfolio Website
+A personal portfolio website built to showcase my technical projects and engineering logs.
 
-  This is a code bundle for Personal Portfolio Website. The original project is available at https://www.figma.com/design/vQqdRJ3kxhB8flRj9as0Qr/Personal-Portfolio-Website.
+## Tech Stack
+- React + TypeScript
+- Tailwind CSS
+- Vite
+- React Router
+- React Markdown
 
-  ## Running the code
+## Features
+- Project journal with timeline-style logs
+- Dark mode support
+- Cosmic cursor animation
+- Markdown-powered project logs with image support
 
-  Run `npm i` to install the dependencies.
-
-  Run `npm run dev` to start the development server.
-  
+## Process
+Started with a Figma prototype, then moved to a custom React/TypeScript implementation. 
+Iteratively built and refined features including a dynamic project log system, 
+responsive layouts, and interactive UI components.
