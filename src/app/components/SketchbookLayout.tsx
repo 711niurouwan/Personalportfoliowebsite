@@ -33,7 +33,7 @@ export function SketchbookLayout() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-slate-200/80 dark:border-slate-800 bg-[#FDFBF7] dark:bg-[#121212] relative z-10 mt-12">
+      <footer id="footer" className="border-t border-slate-200/80 dark:border-slate-800 bg-[#FDFBF7] dark:bg-[#121212] relative z-10 mt-12">
         <div className="max-w-5xl mx-auto p-6 md:p-12 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
             <h3 className="font-hand text-2xl text-slate-800 dark:text-slate-200 mb-2 font-bold">
@@ -51,7 +51,7 @@ export function SketchbookLayout() {
               <a href="https://www.linkedin.com/in/xinyi-zhouu" target="_blank" rel="noopener noreferrer" className="p-2 text-slate-500 hover:text-blue-600 hover:-translate-y-1 transition-all">
                 <Linkedin size={24} />
               </a>
-              <a href="#" className="p-2 text-slate-500 hover:text-blue-600 hover:-translate-y-1 transition-all">
+              <a href="mailto:xinyizhou.eng@gmail.com" className="p-2 text-slate-500 hover:text-blue-600 hover:-translate-y-1 transition-all">
                 <Mail size={24} />
               </a>
             </div>

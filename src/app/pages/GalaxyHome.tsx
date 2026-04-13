@@ -8,11 +8,19 @@ import FuzzyText from '@/components/FuzzyText';
 // Component ported and enhanced from https://codepen.io/JuanFuentes/pen/eYEeoyE
 export function GalaxyHome() {
   const [butterflyActive] = useState(true);
-  const [fontSize, setFontSize] = useState(22);
+  const [fontSize, setFontSize] = useState("22px");
+  // Add this hook near the top of your component
+const [isBirthday, setIsBirthday] = useState(false);
+
+useEffect(() => {
+  const now = new Date();
+  const isToday = now.getMonth() === 3 && now.getDate() === 13; // April 13
+  setIsBirthday(isToday);
+}, []);
 
   useEffect(() => {
     const handleResize = () => {
-      setFontSize(window.innerWidth < 640 ? 14 : 22);
+      setFontSize(window.innerWidth < 640 ? "14px" : "22px");
     };
     handleResize();
     window.addEventListener('resize', handleResize);
@@ -47,6 +55,12 @@ export function GalaxyHome() {
           </Link>
         </div>
       </header>
+            {/* Birthday decoration */}
+            {isBirthday && (
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 pointer-events-none select-none flex gap-3 text-3xl animate-bounce">
+          It's my Bday!🎂🎉🎈
+        </div>
+      )}
     </div>
   );
 }

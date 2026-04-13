@@ -5,8 +5,7 @@ status: "Published"
 role: "..."
 type: "Prototype"
 tech:
-
-image: "https://placehold.co/600x600/1a232e/d9a7b0?text=Gears+Dashboard"
+image: ""
 note: "Need to revisit later..."
 notePos: "..."
 excerpt: "..."

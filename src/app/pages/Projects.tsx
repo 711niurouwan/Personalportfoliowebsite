@@ -35,7 +35,7 @@ export function Projects() {
             <a href="#projects" className="bg-slate-800 text-white dark:bg-slate-200 dark:text-slate-900 px-6 py-3 rounded-md flex items-center gap-2 hover:bg-blue-600 dark:hover:bg-blue-500 hover:text-white transition-all shadow-md hover:-translate-y-1 hover:shadow-lg">
               Projects <ArrowRight size={20} />
             </a>
-            <a href="#contact" className="bg-white dark:bg-[#1e1e1e] border-2 border-slate-300 dark:border-slate-700 px-6 py-3 rounded-md flex items-center gap-2 hover:border-slate-400 transition-all shadow-sm hover:-translate-y-1">
+            <a href="#footer" className="bg-white dark:bg-[#1e1e1e] border-2 border-slate-300 dark:border-slate-700 px-6 py-3 rounded-md flex items-center gap-2 hover:border-slate-400 transition-all shadow-sm hover:-translate-y-1">
               Contact Me <DraftingCompass size={20} />
             </a>
           </div>
@@ -172,24 +172,6 @@ export function Projects() {
         </div>
       </section>
       
-      {/* QUICK SKETCH BANNER */}
-      <section id="contact" className="bg-blue-600 dark:bg-blue-900 text-white rounded-2xl p-8 md:p-12 relative overflow-hidden shadow-lg">
-        {/* Abstract gear watermark */}
-        <div className="absolute inset-0 opacity-10 pointer-events-none mix-blend-overlay" style={{ backgroundImage: `url(${lightGearImg})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }} />
-        
-        <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
-          <div className="space-y-4">
-            <h2 className="font-hand text-4xl font-bold">Let's build together.</h2>
-            <p className="max-w-md text-blue-100 font-body text-lg">
-              Always looking forward to new projects!
-            </p>
-          </div>
-          <a href="mailto:xinyizhou.eng@gmail.com" className="bg-white text-blue-600 px-8 py-4 rounded-xl font-hand text-2xl font-bold hover:bg-yellow-100 hover:text-blue-800 transition-colors shadow-md hover:-translate-y-1 hover:shadow-xl flex items-center gap-3">
-            Say Hello <Pencil size={24} />
-          </a>
-        </div>
-        
-      </section>
 
     </div>
   );

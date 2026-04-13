@@ -3,13 +3,44 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { ArrowLeft, Wrench, FileCode2, Sparkles } from "lucide-react";
 import { getLogBySlug } from "../../content/logs/logs";
+import remarkBreaks from 'remark-breaks';
 
 const markdownComponents = {
+  h2: ({ children }: any) => (
+    <div className="flex items-center gap-3 mt-10 mb-4">
+      <div className="w-3 h-3 rounded-full bg-blue-500 shrink-0" />
+      <h2 className="text-lg font-semibold text-slate-800 dark:text-slate-100 font-hand">
+        {children}
+      </h2>
+    </div>
+  ),
   a: ({ node, ...props }: any) => (
     <a {...props} className="text-blue-600 dark:text-blue-300 underline decoration-dotted hover:text-blue-800 dark:hover:text-blue-100" />
   ),
-  img: ({ node, ...props }: any) => (
-    <img {...props} className="rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm" />
+  ol: ({ children }: any) => (
+    <ol className="list-decimal ml-10 space-y-1 text-slate-600 dark:text-slate-400">
+      {children}
+    </ol>
+  ),
+  li: ({ children }: any) => (
+    <li className="leading-relaxed">
+      {children}
+    </li>
+  ),
+  img: ({ src, alt }: any) => (
+    <div className="my-4">
+      <img
+        src={src}
+        alt={alt}
+        className="rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm max-w-full"
+      />
+      {alt && (
+        <p className="text-xs text-slate-400 mt-1 italic">{alt}</p>
+      )}
+    </div>
+  ),
+  hr: () => (
+    <div className="ml-6 my-6 border-t border-dashed border-slate-200 dark:border-slate-700" />
   ),
   code: ({ node, inline, className, children, ...props }: any) => {
     if (inline) {
@@ -81,18 +112,10 @@ export function ProjectDetail() {
 
       <div className="grid gap-10 lg:grid-cols-[1.45fr_1fr]">
         <div className="space-y-8">
-          <div className="grid gap-6 md:grid-cols-3">
-            <div className="rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#141414] p-6 shadow-sm">
-              <p className="text-sm uppercase tracking-[0.25em] text-slate-500 dark:text-slate-400">Status</p>
-              <p className="mt-4 text-lg font-bold text-slate-900 dark:text-slate-100">{project.status}</p>
-            </div>
+          <div className="grid gap-6 md:grid-cols-1">
             <div className="rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#141414] p-6 shadow-sm">
               <p className="text-sm uppercase tracking-[0.25em] text-slate-500 dark:text-slate-400">Role</p>
               <p className="mt-4 text-lg font-bold text-slate-900 dark:text-slate-100">{project.role}</p>
-            </div>
-            <div className="rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#141414] p-6 shadow-sm">
-              <p className="text-sm uppercase tracking-[0.25em] text-slate-500 dark:text-slate-400">Last Edited</p>
-              <p className="mt-4 text-lg font-bold text-slate-900 dark:text-slate-100">{project.date}</p>
             </div>
           </div>
 
@@ -117,12 +140,11 @@ export function ProjectDetail() {
               <FileCode2 size={20} className="text-blue-600" />
               <span className="font-hand text-xl">Project Log</span>
             </div>
-            <div className="mt-6 prose prose-slate dark:prose-invert max-w-none text-slate-700 dark:text-slate-300">
-              {/* Using a fallback here in case project.body doesn't exist */}
-              <ReactMarkdown components={markdownComponents} remarkPlugins={[remarkGfm]}>
+            <div className="mt-6 prose prose-slate dark:prose-invert max-w-none text-slate-700 dark:text-slate-300 whitespace-pre-line">
+              <ReactMarkdown components={markdownComponents} remarkPlugins={[remarkGfm, remarkBreaks]}>
                 {(project as any).body || project.description}
-              </ReactMarkdown>
-            </div>
+                </ReactMarkdown>
+                </div>
           </div>
         </div>
 
@@ -137,14 +159,6 @@ export function ProjectDetail() {
             )}
           </div>
 
-          <div className="rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#141414] p-8 shadow-sm">
-            <h2 className="font-hand text-2xl text-slate-900 dark:text-slate-100 mb-4">Next steps</h2>
-            <ul className="space-y-3 text-slate-600 dark:text-slate-400 list-disc list-inside">
-              <li>Refine this log with implementation notes and sketches.</li>
-              <li>Add code snippets, diagrams, or links to supporting assets.</li>
-              <li>Update status as the project moves from planning to production.</li>
-            </ul>
-          </div>
         </div>
       </div>
     </section>
