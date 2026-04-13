@@ -7,7 +7,7 @@ role: "Lead Mechanical Engineer"
 intro: "This is 25-26 SET project."
 tech: ["SolidWorks", "3D Printing","Sheet Metal Fabrication", "Tank Tread Design"]
 description: "Designing an autonomous delivery robot. "
-image: "/Personalportfoliowebsite/assets/sketch-01/setdeliveryrobobeforeshowcase.jpg"
+image: "Personalportfoliowebsite/assets/sketch-01/setdeliveryrobobeforeshowcase.jpg"
 slug: "sketch-01"
 note: "In Progress"
 ---
