@@ -7,7 +7,7 @@ role: "Lead Mechanical Engineer"
 intro: "This is 25-26 SET project."
 tech: ["SolidWorks", "3D Printing","Sheet Metal Fabrication", "Tank Tread Design"]
 description: "Designing an autonomous delivery robot. "
-image: "Personalportfoliowebsite/assets/sketch-01/setdeliveryrobobeforeshowcase.jpg"
+image: "/assets/sketch-01/setdeliveryrobobeforeshowcase.jpg"
 slug: "sketch-01"
 note: "In Progress"
 ---
@@ -25,9 +25,9 @@ Some of the chordal dimensions from the previous versions are a little questiona
 
 I remade the sprocket based on the matlab script I made which provided me with all the dimensions, and it works perfectly!
 
-![MATLAB Screenshot](/Personalportfoliowebsite/assets/sketch-01/matlab-ss.png)
+![MATLAB Screenshot](/assets/sketch-01/matlab-ss.png)
 
-![Sprocket Sketch](/Personalportfoliowebsite/assets/sketch-01/sprocket_sketch.png)
+![Sprocket Sketch](/assets/sketch-01/sprocket_sketch.png)
 
 ## Dec.21st
 Updated the side bars for the tread link. Originally there are some extra materials on the cylinder that are gonna cause the link not be able to slide smoothly. 
